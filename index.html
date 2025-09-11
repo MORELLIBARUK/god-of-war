@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>God of War — Enciclopédia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>God of War — Personagens</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>God of War — Enciclopédia de Personagens</h1>
     <nav>
-      <input type="search" id="search" placeholder="Buscar personagem..." aria-label="Buscar personagem">
-      <select id="filter-era" aria-label="Filtrar por era">
+      <input type="search" id="search" placeholder="Buscar personagem...">
+      <select id="filter-era">
         <option value="all">Todas as Eras</option>
         <option value="Grega">Grega</option>
         <option value="Nórdica">Nórdica</option>
       </select>
-      <select id="sort" aria-label="Ordenar">
-        <option value="name">Ordenar por Nome</option>
-        <option value="era">Ordenar por Era</option>
+      <select id="filter-cat">
+        <option value="all">Todas Categorias</option>
+        <option value="principal">Principais</option>
+        <option value="secundario">Secundários</option>
       </select>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Principais</h2>
-      <div id="grid-principais" class="grid" aria-live="polite"></div>
-    </section>
-    <section>
-      <h2>Secundários</h2>
-      <div id="grid-secundarios" class="grid" aria-live="polite"></div>
-    </section>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Categoria</th>
+          <th>Era</th>
+          <th>Função</th>
+          <th>Primeira Aparição</th>
+          <th>História</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- preenchido pelo script.js -->
+      </tbody>
+    </table>
   </main>
 
+  <footer>
+    <p>Projeto de estudo — God of War é propriedade da Santa Monica Studio / Sony.</p>
+  </footer>
+
   <!-- Modal -->
-  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div id="modal" class="modal hidden">
     <div class="modal-content">
-      <button id="modal-close" aria-label="Fechar">✖</button>
+      <button id="modal-close">✖</button>
       <h2 id="modal-title"></h2>
-      <img id="modal-img" alt="" />
-      <p id="modal-desc"></p>
+      <p id="modal-text"></p>
     </div>
   </div>
 
-  <footer>
-    <p>Projeto para estudo — God of War é propriedade da Santa Monica Studio / Sony.</p>
-  </footer>
-
-  <script defer src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

@@ -1,60 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>God of War — Personagens</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>God of War — História e Personagens</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>God of War — Enciclopédia de Personagens</h1>
-    <nav>
-      <input type="search" id="search" placeholder="Buscar personagem...">
-      <select id="filter-era">
-        <option value="all">Todas as Eras</option>
-        <option value="Grega">Grega</option>
-        <option value="Nórdica">Nórdica</option>
-      </select>
-      <select id="filter-cat">
-        <option value="all">Todas Categorias</option>
-        <option value="principal">Principais</option>
-        <option value="secundario">Secundários</option>
-      </select>
-    </nav>
-  </header>
-
-  <main>
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Categoria</th>
-          <th>Era</th>
-          <th>Função</th>
-          <th>Primeira Aparição</th>
-          <th>História</th>
-        </tr>
-      </thead>
-      <tbody id="table-body">
-        <!-- preenchido pelo script.js -->
-      </tbody>
-    </table>
-  </main>
-
-  <footer>
-    <p>Projeto de estudo — God of War é propriedade da Santa Monica Studio / Sony.</p>
-  </footer>
-
-  <!-- Modal -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <button id="modal-close">✖</button>
-      <h2 id="modal-title"></h2>
-      <p id="modal-text"></p>
-    </div>
+  <!-- VIDEO DE FUNDO -->
+  <div class="video-bg">
+    <iframe
+      src="https://www.youtube.com/embed/hTrbRzt9QW4?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=hTrbRzt9QW4"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+    ></iframe>
+    <div class="overlay"></div>
   </div>
 
-  <script src="script.js" defer></script>
+  <!-- CONTEÚDO -->
+  <main class="container">
+    <header class="intro">
+      <h1>God of War</h1>
+      <p>
+        <strong>God of War</strong> é uma das franquias mais icônicas dos videogames. 
+        A saga começa na mitologia grega, onde Kratos, o Fantasma de Esparta, luta contra deuses 
+        como Ares, Zeus e Atena em busca de vingança. Após destruir o panteão grego, Kratos parte 
+        para o norte, iniciando um novo ciclo na mitologia nórdica. 
+        <br><br>
+        Em <em>God of War (2018)</em>, vemos um Kratos mais velho, tentando abandonar seu passado 
+        violento e criar seu filho Atreus. A história explora redenção, família e destino, 
+        colocando os protagonistas contra deuses e criaturas da cultura nórdica.
+      </p>
+    </header>
+
+    <h2 class="section-title">Personagens Principais</h2>
+
+    <!-- Personagens -->
+    <section class="card"><h3>Kratos</h3><p>O Fantasma de Esparta, protagonista da saga. Em God of War (2018), busca redenção após anos de violência contra os deuses gregos. Agora vive no mundo nórdico, tentando ensinar Atreus a ser melhor do que ele foi. <strong>Função:</strong> guerreiro principal, líder e protetor.</p></section>
+
+    <section class="card"><h3>Atreus (Loki)</h3><p>Filho de Kratos e Faye, é um jovem arqueiro curioso e inteligente. Sua jornada é de amadurecimento, descobrindo sua verdadeira identidade como Loki, ligado ao destino dos deuses nórdicos. <strong>Função:</strong> apoio em combate, compreensão de runas e elo emocional da narrativa.</p></section>
+
+    <section class="card"><h3>Freya</h3><p>Deusa Vanir e antiga rainha das Valquírias. Atua como aliada, mas carrega dores do passado. <strong>Função:</strong> guia espiritual, curandeira e poderosa feiticeira. Após a morte de Baldur, jura vingança contra Kratos.</p></section>
+
+    <section class="card"><h3>Baldur</h3><p>Filho de Odin e Freya, é o principal antagonista. Amaldiçoado com invulnerabilidade e incapacidade de sentir, deseja quebrar sua condição a qualquer custo. <strong>Função:</strong> vilão trágico, rival de Kratos e Atreus.</p></section>
+
+    <section class="card"><h3>Mimir</h3><p>Conhecido como "o homem mais sábio vivo". É encontrado preso e decapitado por Kratos, mas continua vivo como cabeça falante. <strong>Função:</strong> conselheiro, guia nos mitos nórdicos e suporte intelectual.</p></section>
+
+    <section class="card"><h3>Sindri</h3><p>Ferreiro anão, conhecido por sua habilidade e obsessão com limpeza. Junto de seu irmão Brok, forja armas lendárias, incluindo o Machado Leviatã. <strong>Função:</strong> suporte, criação e melhoria de equipamentos.</p></section>
+
+    <section class="card"><h3>Brok</h3><p>Irmão de Sindri, também é ferreiro habilidoso, mas rude e corajoso. Ajuda Kratos e Atreus com melhorias e armas. <strong>Função:</strong> suporte prático e criador de itens.</p></section>
+
+    <section class="card"><h3>Magni</h3><p>Filho de Thor, guerreiro forte e aliado de Modi. Confronta Kratos e Atreus, mas acaba derrotado. <strong>Função:</strong> mini-antagonista e prova da força dos heróis.</p></section>
+
+    <section class="card"><h3>Modi</h3><p>Irmão de Magni, também filho de Thor. Sobrevive após a morte de Magni, mas é derrotado por Atreus. <strong>Função:</strong> rivalidade e desenvolvimento do arco de Atreus.</p></section>
+
+    <section class="card"><h3>Thor</h3><p>Deus do Trovão, pai de Magni e Modi. Apesar de aparecer pouco, é uma figura imponente e presságio para o futuro da saga. <strong>Função:</strong> antagonista indireto, prenúncio de Ragnarok.</p></section>
+
+    <section class="card"><h3>Odin</h3><p>O Pai de Todos, governante de Asgard. Não aparece diretamente, mas é mencionado como manipulador e obcecado por conhecimento e controle dos reinos. <strong>Função:</strong> antagonista maior, influência invisível na trama.</p></section>
+
+    <!-- Linha do tempo -->
+    <h2 class="section-title">Linha do Tempo — God of War (2018)</h2>
+    <section class="card timeline">
+      <ul>
+        <li><span>Início:</span> Após a morte de Faye, Kratos e Atreus partem para cumprir seu último desejo: espalhar suas cinzas.</li>
+        <li><span>Primeiro Confronto:</span> Kratos enfrenta Baldur em uma batalha intensa logo no início da jornada.</li>
+        <li><span>Guias e Aliados:</span> Eles encontram Mimir, que se torna conselheiro, e recebem ajuda de Sindri e Brok.</li>
+        <li><span>Conflitos:</span> Kratos e Atreus lutam contra Magni e Modi, filhos de Thor.</li>
+        <li><span>Revelações:</span> Atreus descobre sua verdadeira identidade como Loki.</li>
+        <li><span>Clímax:</span> Kratos derrota Baldur, mas Freya jura vingança.</li>
+        <li><span>Profecia:</span> A dupla encontra um mural que revela possíveis destinos trágicos para ambos.</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
